@@ -16,7 +16,7 @@ RUN mkdir -p /usr/src/app
 COPY package.json /usr/src/app/
 
 WORKDIR /usr/src/app
-RUN npm install
+RUN npm install && npm update -g
 RUN npm install -g bower grunt-cli coffee-script && \
 echo '{ "allow_root": true }' > /root/.bowerrc
 
